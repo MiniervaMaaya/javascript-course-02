@@ -1,19 +1,26 @@
 'use strict';
  
-//constants
+////////////////////////////////////
+// Constants & Selectors
+
+// Ranges and defaults
 const MIN_NUMBER = 1;
 const MAX_NUMBER = 20;
-const STARTING_SCORE = 20;
- 
-// Cached selectors
+const START_SCORE = 20;
+
+// Cached selectors (single source of truth)
+////////////////////////////////////
+// Constants & Selector
+
+// Cached selectors (single source of truth)
 const bodyEl = document.body;
 const messageEl = document.querySelector('.message');
-const scoreEl = document.querySelector('.score');
 const numberEl = document.querySelector('.number');
+const scoreEl = document.querySelector('.score');
 const highscoreEl = document.querySelector('.highscore');
 const guessInputEl = document.querySelector('.guess');
 const checkBtnEl = document.querySelector('.check');
-const againkBtnEl = document.querySelector('.again');
+const againBtnEl = document.querySelector('.again');
  
 //UI Helpers
 function setMessage(text) {
