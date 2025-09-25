@@ -25,6 +25,7 @@
 // btnCloseModalEl.addEventListener('click', closeModal);
 
 // overlayEl.addEventListener('click', closeModal);
+console.log('===MODAL DEVELOPMENT: KEYBOARD EVENTS & ADVANCED UX===');
 
 const modalEl = document.querySelector('.modal');
 const overlayEl = document.querySelector('.overlay');
@@ -46,3 +47,28 @@ const closeModal = function () {
 btnsOpendModalEl.forEach(btn => btn.addEventListener('click', openModal));
 btnsCloseModalEl.adddEventListener('click', closeModal);
 overlayEl.addEventListener('click', closeModal);
+
+console.log('Enchanced modal development ready!');
+
+console.log('keyboard events test');
+
+document.addEventListener('keydown', function (e) {
+    console.log('key pressed: ', e);
+
+    console.log('key pressed: ', e.key);
+});
+
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+        closeModal();
+    }
+});
+
+document.addEventListener('keydown', function (e) {
+   console.log('key pressed:', e.key, 'Modal visible:', !modalEl.classList.contains('hidden'));
+
+   if (e.key === 'Escape' && !modalEl.classList.contains('hidden')) {
+       closeModal();
+   }
+});
+    
