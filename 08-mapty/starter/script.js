@@ -7,13 +7,13 @@ class Workout {
     id = (Date.now() + ' ').slice(-10);
     clicks =0;
 
-    constructor(coords, distance, durant){
+    constructor(coords, distance, duration){
      this.coords = coords;
      this.distance = distance;
      this.duration = duration;
     }
 
-    setDescription() {
+    _setDescription() {
         const months = ['January', 'February','March', 'April', 'May', 'june', 'July', 'August', 'September', 'October', 'November', 'December'];
 
         this.description = `${this.type[0].toUpperCase()}${this.type.slice(1)}
@@ -47,7 +47,7 @@ class Running extends Workout {
 class Cycling extends Workout {
     type = 'cycling';
 
-    constructor(coords, distansce, duration, elevationGain){
+    constructor(coords, distance, duration, elevationGain){
         super(coords, distance, duration);
         this.elevationGain = elevationGain;
         this.calcSpeed();
